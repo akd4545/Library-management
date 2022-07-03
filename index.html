@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+    <div class="form-container">
+        <div class="form-btn">
+            <span onclick="Admin()">Admin</span>
+            <span onclick="Student()">Student</span>
+            <hr id="indicator">
+        </div>
+        <form id="SingForm">
+            <input type="text" placeholder="username">
+
+            <input type="password" placeholder="password">
+            <button type="submit" class="btn"><a href="loginpage.html" target="_blank">Login</a></button>
+            <br>
+            <a href="">Forgot password?</a>
+            <a href="">register</a>
+        </form>
+        <form id="LoginForm">
+            <input type="text" placeholder="username">
+            <input type="email" placeholder="email">
+            <input type="password" placeholder="password">
+            <button type="submit" class="btn"><a href="adminlogin.html" target="_blank">Signin</a></button>
+        </form>
+
+
+    </div>
+    <script>
+        var SingForm = document.getElementById("SingForm");
+        var LoginForm = document.getElementById("LoginForm");
+        var indicator = document.getElementById("indicator");
+
+
+        function Student() {
+            SingForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            indicator.style.transform = "translateX(60px)";
+        }
+        function Admin() {
+            SingForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(365px)";
+            indicator.style.transform = "translateX(-50px)";
+        }
+    </script>
+
+</body>
+
+</html>
